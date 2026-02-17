@@ -48,10 +48,22 @@ while($k=mysqli_fetch_array($kriteria)){
 </div>
 <?php } ?>
 
-<button class="btn btn-primary">Kirim</button>
+<button type="submit" name="simpan" class="btn btn-primary">
+    Kirim
+</button>
+
 </form>
 
 </div>
 </div>
+<div class="mt-3 text-end">
+    <a href="index.php" class="btn btn-secondary">
+        ← Kembali ke Dashboard
+    </a>
+</div>
+
+    </button>
+</div>
+
 
 <?php include "footer.php"; ?>
