@@ -2,7 +2,6 @@
 include "koneksi.php";
 include "header.php";
 
-
 echo "<div class='card shadow'>";
 echo "<div class='card-header bg-warning'><h5>Hasil Evaluasi SMART</h5></div>";
 echo "<div class='card-body'>";
@@ -15,9 +14,9 @@ echo "<thead class='table-dark'>
 <th>Nilai Akhir</th>
 <th>Keterangan</th>
 <th>Aksi</th>
-
 </tr>
 </thead><tbody>";
+
 if(isset($_GET['hapus'])){
     $id = $_GET['hapus'];
 
@@ -74,22 +73,16 @@ while($r=mysqli_fetch_assoc($responden)){
         <td>
             <a href='?hapus=".$r['id_responden']."' 
             class='btn btn-danger btn-sm'
-            onclick=\"return confirm('Yakin ingin menghapus data ini?')\">
+            onclick=\"return confirm('Yakin ingin hapus data ini?')\">
             Hapus
             </a>
         </td>
-      </tr>";
+    </tr>";
 
     $no++;
 }
 
 echo "</tbody></table>";
-echo "</div></div>";
-
-include "footer.php";
-?>
-</tbody>
-</table>
 
 echo "<div class='mt-3 text-end'>
         <a href='index.php' class='btn btn-secondary'>
@@ -97,9 +90,7 @@ echo "<div class='mt-3 text-end'>
         </a>
       </div>";
 
-</div>
+echo "</div></div>";
 
-</div>
-</body>
-</html>
-
+include "footer.php";
+?>
